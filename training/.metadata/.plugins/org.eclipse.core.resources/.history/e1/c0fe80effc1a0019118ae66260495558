@@ -1,0 +1,12 @@
+package com.client;
+
+import com.model.Medicine;
+import com.model.Tablet;
+
+public class TestMedicine {
+	public static void main(String args[]){
+		Medicine m = new Medicine("abc","fgh");
+		m.displaylabel("abc", "fgh");
+		Tablet t = new Tablet();
+	}
+}

@@ -1,0 +1,10 @@
+package com.model;
+
+public class Tablet extends Medicine {
+
+	public Tablet(){
+		super("medicine","");
+		System.out.println("store in cool and dry place");
+	}
+	
+}

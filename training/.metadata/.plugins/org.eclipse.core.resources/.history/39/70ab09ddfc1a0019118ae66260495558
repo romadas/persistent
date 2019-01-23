@@ -1,0 +1,19 @@
+package com.model;
+
+public class Tablet extends Medicine {
+	public String medicine;
+	
+	public Tablet(){
+		super();
+		System.out.println("store in cool and dry place");
+	}
+
+	@Override
+	public void displaylabel(String name, String address) {
+		// TODO Auto-generated method stub
+		super.displaylabel("tablet", "thg");
+	}
+	
+	
+	
+}

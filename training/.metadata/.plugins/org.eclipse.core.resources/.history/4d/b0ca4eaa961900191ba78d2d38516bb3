@@ -1,0 +1,47 @@
+package com.LearnToDrive.Client;
+
+public class PhoneNumber {
+	private String area_code;
+	private String exchange;
+	private String extension;
+	public PhoneNumber(){
+		
+	}
+	
+	public PhoneNumber(String area_code, String exchange, String extension) {
+		super();
+		this.area_code = area_code;
+		this.exchange = exchange;
+		this.extension = extension;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("(%03d)%03d-%04d", area_code,exchange,extension);
+	}
+
+	public String getArea_code() {
+		return area_code;
+	}
+	public void setArea_code(String area_code) {
+		this.area_code = area_code;
+	}
+	public String getExchange() {
+		return exchange;
+	}
+	public void setExchange(String exchange) {
+		this.exchange = exchange;
+	}
+	public String getExtension() {
+		return extension;
+	}
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
+	public static void main(String args[]){
+		PhoneNumber ph = new PhoneNumber("800","867","5309");
+		System.out.println(ph);		
+		
+	}
+	
+}

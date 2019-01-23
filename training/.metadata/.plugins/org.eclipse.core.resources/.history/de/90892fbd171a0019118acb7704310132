@@ -1,0 +1,22 @@
+package com.psl.main;
+
+public class EzeeShop {
+	private String productName[];
+	private String keyword;
+	public static String[] initProductNames(String productName[]){
+		System.out.println("products are:");
+		return productName;
+	}
+	
+	
+	
+	
+	
+	public static void main(String args[]){
+		EzeeShop ez = new EzeeShop();
+		String productName[] ={"soap","washing powder"};
+		EzeeShop.initProductNames(productName);
+		
+		
+	}
+}

@@ -1,0 +1,23 @@
+package com.psl.model;
+
+public class Cube extends shape1{
+	private double side;
+
+	public Cube(double side) {
+		super();
+		this.side = side;
+	}
+
+	public double getSide() {
+		return side;
+	}
+
+	public void setSide(double side) {
+		this.side = side;
+	}
+	
+	public void getVolume(){
+		setVolume(side*side);
+	}
+	
+}

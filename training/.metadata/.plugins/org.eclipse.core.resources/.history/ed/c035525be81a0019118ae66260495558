@@ -1,0 +1,8 @@
+package com.client;
+
+public class Medicine {
+
+		public static void main(String args[]){
+			
+		}
+}

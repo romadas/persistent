@@ -1,0 +1,21 @@
+package com.psl.Client;
+import com.psl.Model.Circle;
+import com.psl.Model.Shape2D;
+
+
+public class Main {
+	public static void main(String args[]){
+		Circle c = new Circle(6.4);
+		shapeManager(c);
+	}
+		public static void shapeManager(Shape2D s){
+			s.calculateArea();
+			s.calculatePerimeter();
+			System.out.println(s.getName());
+			System.out.println(s.getArea());
+			System.out.println(s.getPerimeter());
+		
+	}
+}
+
+

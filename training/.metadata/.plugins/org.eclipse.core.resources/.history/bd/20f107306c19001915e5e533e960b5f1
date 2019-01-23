@@ -1,0 +1,5 @@
+package com.LearnToDrive.util;
+
+public enum FuelType {
+
+}

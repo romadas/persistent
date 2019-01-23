@@ -1,0 +1,5 @@
+package com.LearnToDrive.Model;
+
+public class Vehicle {
+
+}

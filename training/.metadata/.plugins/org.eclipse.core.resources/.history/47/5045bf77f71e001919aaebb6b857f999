@@ -1,0 +1,5 @@
+package com.bank.aadhar;
+
+public class BankAccount {
+
+}

@@ -1,0 +1,13 @@
+package com.psl.Client;
+
+public class Airplan extends Vehicle implements Driveable {
+	public void accelerate(){
+		
+	}
+	public void steer(){
+		
+	}
+	public void brake(){
+		
+	}
+}

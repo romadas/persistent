@@ -1,0 +1,9 @@
+package com.model;
+public class Medicine {
+	public String Name, Address;
+	
+	public void display(){
+		System.out.println("name of the company");
+		System.out.println("address of the company");
+	}
+}

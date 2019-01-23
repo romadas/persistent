@@ -1,0 +1,13 @@
+package com.persistent.com;
+
+public class Advisor {
+	public String message[]= new String[5];
+	
+	public Advisor(){
+		
+		//messge[5] = new String[];
+		message[5] = {"never say no","sun rises from east","today is monday","mountains are beautiful","nothing more to say"};
+		
+		}
+	}
+}

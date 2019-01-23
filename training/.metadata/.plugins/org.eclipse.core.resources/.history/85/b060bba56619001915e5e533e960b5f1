@@ -1,0 +1,14 @@
+package com.psl.main;
+
+public class ReverseString {
+	public static void main(String args[]){
+		String str[] = {"to","be"} ;
+		String str1[] = new String[str.length];
+		for(int i = 0; i < str.length-1; i++){
+			for(int j = str[i].length()-1; j>=0;j--){
+				str1[i] += str[i].substring(j,j+1);
+			}
+			System.out.println(str1);
+		}
+	}
+}

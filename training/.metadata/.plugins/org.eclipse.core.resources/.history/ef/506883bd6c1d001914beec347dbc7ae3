@@ -1,0 +1,13 @@
+package com.psl.Client;
+
+public class UserInterface {
+
+	public static void main(String[] args) {
+		Car car = new Car();
+		car.setMake("audi");
+		car.setModel("a-tron");
+		car.setColor("bright yellow");
+		car.setEngine(new Engine(125,1000,FuelType.DIESEL));
+	}
+
+}

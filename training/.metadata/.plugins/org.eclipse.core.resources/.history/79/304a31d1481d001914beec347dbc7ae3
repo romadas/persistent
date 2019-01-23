@@ -1,0 +1,21 @@
+package com.psl.Client;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+public class Main {
+	public static void main(String args[]){
+		Properties p = new Properties();
+		try{
+			p.load(new FileReader(new File("configration.properties")));
+			System.out.println(p.get("OS"));
+			System.out.println(p.get("RAM"));
+			System.out.println(p.get("Storage"));
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}
