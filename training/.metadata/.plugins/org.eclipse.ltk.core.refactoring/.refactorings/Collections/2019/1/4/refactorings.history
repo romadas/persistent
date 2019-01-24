@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BankAccount.java&apos; to &apos;JDBC/src/com.psl.util&apos;&#x0D;&#x0A;- Original project: &apos;Collections&apos;&#x0D;&#x0A;- Destination element: &apos;JDBC/src/com.psl.util&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.util.BankAccount.java&apos;" description="Copy compilation unit" destination="=JDBC/src&lt;com.psl.util" element1="/src&lt;com.psl.util{BankAccount.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1548313500763" units="1" version="1.0"/>
+</session>

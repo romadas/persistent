@@ -1,0 +1,31 @@
+package com.collections.map;
+
+import java.io.File;
+
+public class SearchUtility {
+	public static void main(String args[]){
+		SearchUtility su = new SearchUtility();
+		//String Filename = "Test1";
+		su.searchFile("src"," Test1");
+	}
+	
+	public boolean searchFile(String path,String Filename){
+		File f = new File(path);
+		
+		boolean result = false;
+		System.out.println(f);
+		if(f.isDirectory()){
+			for(String f1 : f.list()){
+				if(f1.contains(Filename)){
+					System.out.println("file present");
+					result = true;
+				}else{
+					
+				System.out.println("file not present");
+				result = false;
+				}
+			}
+		}
+		return result;
+	}
+}

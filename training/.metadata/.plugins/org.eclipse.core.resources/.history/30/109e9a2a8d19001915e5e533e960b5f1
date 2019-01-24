@@ -1,5 +1,0 @@
-package com.LearnToDrive.util;
-
-public enum FuelType {
-	PETROL,DIESEL,NATURAL_GAS
-}

@@ -1,0 +1,21 @@
+package com.practice.sql;
+
+import java.sql.Connection;
+
+public class Student {
+	static{
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String args[]){
+		Connection connection;
+		record roma = new record("3", "roma", "A");
+		record astha = new record("1", "astha", "A");
+		record khusboo = new record("2", "khushboo", "A");
+		record shivanee = new record("4", "shivanee", "A");
+	}
+}

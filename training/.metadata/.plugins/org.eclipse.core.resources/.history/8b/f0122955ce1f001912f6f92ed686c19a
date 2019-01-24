@@ -1,0 +1,48 @@
+package com.practice.sql;
+
+import java.io.ObjectInputStream.GetField;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Student {
+	static{
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+		}catch(ClassNotFoundException e){
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String args[]){
+		Connection connection;
+		record roma = new record("3", "roma", "A");
+		record astha = new record("1", "astha", "A");
+		record khusboo = new record("2", "khushboo", "A");
+		record shivanee = new record("4", "shivanee", "A");
+		try {
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "root");
+			Statement statement;
+			statement = connection.createStatement();
+			
+			String sql;
+			sql = String.format("INSERT INTO tbl_bank_accounts VALUES('%s','%s','%s')",roma.getRoll_no(),roma.getName(),roma.getGrade());
+			statement.execute(sql);
+			sql = String.format("INSERT INTO tbl_bank_accounts VALUES('%s','%s','%s')",astha.getRoll_no(),astha.getName(),astha.getGrade());
+			statement.execute(sql);
+			sql = String.format("INSERT INTO tbl_bank_accounts VALUES('%s','%s','%s')",khusboo.getRoll_no(),khusboo.getName(),khusboo.getGrade());
+			statement.execute(sql);
+			sql = String.format("INSERT INTO tbl_bank_accounts VALUES('%s','%s','%s')",shivanee.getRoll_no(),shivanee.getName(),shivanee.getGrade());
+			statement.execute(sql);
+			
+		
+		
+		
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+}

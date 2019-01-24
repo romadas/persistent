@@ -16,5 +16,6 @@ public class GenericELTP {
 			System.out.println(itr.next());
 		}
 		System.out.println(str.get(0));
+	
 	}
 }

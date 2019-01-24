@@ -1,0 +1,30 @@
+package com.collections.map;
+
+import java.io.File;
+import java.io.IOException;
+
+public class SearchUtility {
+	public static void main(String args[]) throws IOException{
+		SearchUtility su = new SearchUtility();
+		//String Filename = "Test1";
+		su.searchFile("/Nugget"," byte.txt");
+	}
+	
+	public boolean searchFile(String path,String Filename) throws IOException{
+		File f = new File(path);
+		
+		System.out.println(path);
+		if(f.isDirectory()){
+			for(File f1 : f.listFiles()){
+				if(f1.getName().equals(Filename)){
+
+					System.out.println("present");
+					return true;
+				}else{
+					searchFile(f1.getCanonicalPath(), Filename);
+				}
+			}
+		}
+		return false;
+	}
+}
