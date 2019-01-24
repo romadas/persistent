@@ -9,28 +9,21 @@ import java.io.IOException;
 public class CountWords {
 
 	public static void main(String[] args) {
-		CountWords c = new CountWords();
-		c.countWords("read.txt");
+		
 
 	}
 	public int countWords(String filePath){
 		File f = new File(filePath);
-		int count = 0;
 		try {
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
-			while((br.read())!= -1){
+			while(br.read()!= -1){
 				String str = br.toString();
 				char c[] = str.toCharArray();
-				for(int i = 0; i <c.length;i++){
-					if(c[i]==' '){
-						count++;
-					}else{
-						return count;
-					}
+				if(c){
+					
 				}
 			}
-			System.out.println(count);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,7 +31,6 @@ public class CountWords {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return count;
 		
 	}
 
