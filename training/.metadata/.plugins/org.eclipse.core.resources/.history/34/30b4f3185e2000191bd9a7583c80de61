@@ -1,0 +1,9 @@
+package com.collections.map;
+
+import java.util.Vector;
+
+public class Name {
+	String fname;
+	String lname;
+	
+}

@@ -1,0 +1,36 @@
+package com.collections.map;
+
+import java.util.Scanner;
+import java.util.Vector;
+
+public class User {
+	static Vector<Name> v=new Vector<Name>();
+	public static void main(String args[]){
+		int n;
+		Name name=new Name(args[0],args[1]);
+		
+		while(true){
+			
+			Scanner obj = new Scanner(System.in);
+			n = obj.nextInt(); 
+			
+			switch(n){
+			case 1: System.out.println("enter the first name:");
+					String fname=in.next();
+					System.out.println("enter the second name:");
+					String lname=in.next();
+					Name newname=new Name(fname,lname);
+					v.add(newname);
+					
+			case 2: 
+			}
+			
+			
+			
+		}
+		
+		
+	
+		
+	}
+}

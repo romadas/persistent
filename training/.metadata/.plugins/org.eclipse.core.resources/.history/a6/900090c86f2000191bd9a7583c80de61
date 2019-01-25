@@ -1,0 +1,27 @@
+package esg.itp.shape;
+
+public class Rectangle implements Polygon{
+	public float length;
+	public float breadth;
+	float a,b;
+	
+
+	@Override
+	public void calcArea() {
+		
+		
+	}
+
+	@Override
+	public void calPeri() {
+		
+		
+	}
+
+	@Override
+	public void display() {
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.psl.util;
+
+public class SynchronizationDemo {
+
+	public static void main(String[] args) {
+		SharedResource sharedResource;
+		sharedResource = new SharedResource(100_000_000_000);
+		new UpdateSharedResource(sharedResource).start();
+	}
+
+}

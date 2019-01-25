@@ -1,0 +1,36 @@
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class Movie {
+	String name;
+	String lang;
+	Date date;
+	
+	public Movie() {
+		this.name=null;
+		this.lang=null;
+		this.date=null;
+	}
+
+
+	public Movie(String name, String lang, Date date) {
+		super();
+		this.name = name;
+		this.lang = lang;
+		this.date = date;
+	}
+
+
+	public void addShow() throws SQLException {
+		Connection con=ConnectionManager.getConnection();
+		PreparedStatement ps=con.prepareStatement("insert into details values (0,?,?,?)");
+		ps.setString(1,name);
+		ps.setString(2,lang);
+		ps.setDate(3,date);		
+		ps.executeUpdate();		
+	}
+
+}

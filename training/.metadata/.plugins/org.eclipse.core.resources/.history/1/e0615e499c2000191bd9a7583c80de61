@@ -1,0 +1,14 @@
+package com.psl.util;
+
+public class InterThreadCommunication {
+	public static void main(String args[]) throws InterruptedException{
+		CommanResource commanResource;
+		commanResource = new CommanResource();
+		
+		new UpdateCommonResource(commanResource).start();
+		
+		Thread.sleep(100);
+		
+		new AccessCommonResource(commanResource).start();
+	}
+}

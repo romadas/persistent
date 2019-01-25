@@ -1,0 +1,47 @@
+package esg.itp.shape;
+
+public class Square implements Polygon{
+	public float side;
+	float a,b;
+	
+	public Square() {
+		super();
+		
+	}
+
+	public Square(float side) {
+		super();
+		this.side = side;
+	}
+
+	public float getSide() {
+		return side;
+	}
+
+	public void setSide(float side) {
+		this.side = side;
+	}
+	@Override
+	public void calcArea() {
+		a = getSide()*getSide();
+		System.out.println(a);
+		return;
+		
+	}
+	@Override
+	public void calPeri() {
+		b = 4 * getSide();
+		System.out.println(b);
+		return;
+		
+	}
+
+	@Override
+	public void display() {
+		Square s = new Square();
+		System.out.println("area"+a);
+		System.out.println("perimeter"+b);
+		
+	}
+
+}

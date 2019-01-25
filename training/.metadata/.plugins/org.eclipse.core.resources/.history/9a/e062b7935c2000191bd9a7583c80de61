@@ -1,0 +1,17 @@
+package com.collections.map;
+
+import java.util.Scanner;
+
+public class User {
+	public static void main(String args[]){
+		int n;
+		Scanner obj = new Scanner(System.in);
+		n = obj.nextInt(); 
+		switch(n){
+		case 1: System.out.println("enter the first name:"+args[0]);
+				System.out.println("enter the second name:"+args[1]);
+		
+		}
+		
+	}
+}

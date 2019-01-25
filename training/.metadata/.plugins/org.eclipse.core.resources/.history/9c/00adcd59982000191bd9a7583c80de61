@@ -1,0 +1,34 @@
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+
+
+public class Movie {
+	String name;
+	String lang;
+	Date date;
+	
+	public Movie() {
+		this.name=null;
+		this.lang=null;
+		this.date=null;
+	}
+
+
+	public Movie(String name, String lang, Date date) {
+		super();
+		this.name = name;
+		this.lang = lang;
+		this.date = date;
+	}
+
+
+	public static void addShow(Movie m) {
+		Connection con=ConnectionManager.getConnection();
+		PreparedStatement ps=con.prepareStatement("insert into details values (0,?,?,?)");
+		
+		
+ 		
+	}
+
+}

@@ -1,5 +1,0 @@
-package com.psl.Client;
-
-public class Truck extends Vehicle {
-
-}

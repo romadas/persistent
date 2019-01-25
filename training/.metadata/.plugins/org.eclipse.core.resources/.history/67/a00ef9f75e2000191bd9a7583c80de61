@@ -1,0 +1,22 @@
+package com.collections.map;
+
+import java.util.Scanner;
+
+public class User {
+	Vector<Name> b=new Vector<Name>();
+	public static void main(String args[]){
+		int n;
+		Name n=new Name(args[0],args[1]);
+		Scanner obj = new Scanner(System.in);
+		n = obj.nextInt(); 
+		
+		switch(n){
+		case 1: System.out.println("enter the first name:"+fname);
+				System.out.println("enter the second name:"+lname);
+				Name name=new Name()
+				
+		case 2: 
+		}
+		
+	}
+}

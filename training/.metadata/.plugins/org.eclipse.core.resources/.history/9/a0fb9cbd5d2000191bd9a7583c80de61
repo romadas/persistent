@@ -1,0 +1,10 @@
+package com.collections.map;
+
+import java.util.Vector;
+
+public class Name {
+	Vector<Object> v = new Vector<Object>(2);
+	v.add(User.);
+	v.a
+	
+}

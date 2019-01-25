@@ -19,15 +19,11 @@ public class CountWords {
 		try {
 			FileReader fr = new FileReader(f);
 			BufferedReader br = new BufferedReader(fr);
-			while((br.read())!= -1){
-				String str = br.toString();
-				char c[] = str.toCharArray();
-				for(int i = 0; i <c.length;i++){
-					if(c[i]==' '){
+			String line;
+			while((line=br.readLine())!=null){
+					String str[] = line.split(" ");
+					for(String p : str){
 						count++;
-					}else{
-						return count;
-					}
 				}
 			}
 			System.out.println(count);

@@ -1,0 +1,9 @@
+package com.psl.util;
+
+public class AccessSharedResources extends Thread {
+	private SharedResource sharedResource;
+	
+	public AccessSharedResources(SharedResource sharedResource){
+		this.sharedResource = sharedResource;
+	}
+}
