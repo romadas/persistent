@@ -1,0 +1,17 @@
+package com.psl.client;
+
+import java.lang.reflect.Field;
+
+public class Client {
+
+	public static void main(String[] args) {
+		BankAccount account = new BankAccount("roma","63737",7282.89);
+		
+		Class<?> cls = account.getClass();//Generic class
+		for(Field f:cls.getDeclaredFields()){
+			System.out.println(f.getType());
+			System.out.println(f.getName());
+		}
+	}
+
+}

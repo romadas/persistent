@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 public class Main {
 
 	public static void main(String[] args) throws SQLException, ParseException {
+		Movie.truncate();
 		try(BufferedReader br=new BufferedReader(new FileReader("movies.txt"))){
 			String line;
 			while((line=br.readLine())!=null){
@@ -19,13 +20,15 @@ public class Main {
 				String lang=arr[2];
 				Date date=sqlDate(arr[3]);
 				Movie m=new Movie(name,lang,date);
-				m.addShow();			
+				m.addShow();
 			}
 		}catch(FileNotFoundException e){
 			System.out.println("FileNotFound");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		Movie m = new Movie();
+		m.update();
 	}
 
 	private static Date sqlDate(String string) throws ParseException {

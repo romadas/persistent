@@ -1,0 +1,55 @@
+package com.psl.Client;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class CityStateMap {
+	Map<String,List<String>> map;
+	
+	public CityStateMap(){
+		map = new HashMap<String, List<String>>();
+	}
+	
+	public void addCityState(String state,String city){
+		List<String> cities = new 	ArrayList<String>();
+		cities.add(city);
+		
+		map.put(state, cities);
+		
+	}
+	
+	public List<String> getAllCity(){
+		return null;
+		
+	}
+	
+	public List<String> getAllState(){
+		return null;
+		
+	}
+	
+	public List<String> getCities(String state){
+		return null;
+		
+	}
+	public void deleteCities(String state){
+		
+	}
+	public String getState(String city){
+		return city;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "CityStateMap [map=" + map + "]";
+	}
+	
+	
+	
+}

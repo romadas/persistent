@@ -1,0 +1,18 @@
+package com.psl.Client;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class CityStateMap {
+	public static void main(String args[]){
+		try {
+			FileOutputStream fi = new FileOutputStream("city.txt");
+			
+		} catch (FileNotFoundException e) {
+		
+			e.printStackTrace();
+		}
+		
+	}
+}

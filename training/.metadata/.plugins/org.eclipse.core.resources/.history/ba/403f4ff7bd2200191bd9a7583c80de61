@@ -1,0 +1,8 @@
+package com.psl.main;
+
+public class GenericMethod {
+	public static <T> void print(Collection<T> collection){
+		
+		
+	}
+}

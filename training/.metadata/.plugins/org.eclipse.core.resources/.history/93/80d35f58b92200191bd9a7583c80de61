@@ -1,0 +1,21 @@
+package com.psl.Client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.psl.util.Movies;
+
+public class Main {
+	public static void main(String args[]){
+		List<Movies> listm = new ArrayList<Movies>();
+		Movies m=new Movies();
+		m.setName("my name is khan");
+		m.setLanguage("hindi");
+		m.setReleaseDate("28/10/2010");
+		m.setProducer("karan johar");
+		m.setDuration("2:30");
+		m.setDirector("abc");
+		listm.add(m);
+		
+	}
+}

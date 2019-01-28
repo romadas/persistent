@@ -1,0 +1,14 @@
+package com.psl.Client;
+
+
+public class StringMutable {
+	public static void main(String args[]){
+	List<student> ll=new ArrayList<student>();
+	ll.add(new student("aman"));
+	ll.add(new student("sejal"));
+	
+	if(ll.contains(new student("sejal"))){
+		System.out.println("found");
+	}
+	}
+}

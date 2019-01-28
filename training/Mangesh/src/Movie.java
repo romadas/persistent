@@ -33,4 +33,17 @@ public class Movie {
 		ps.executeUpdate();		
 	}
 
+	public void update() throws SQLException {
+		Connection con = ConnectionManager.getConnection();
+		PreparedStatement ps = con.prepareStatement("update details set name = ? where language = ?");
+		ps.setString(1, "inception");
+		ps.setString(2, "hindi" );
+		ps.executeUpdate();
+	}
+	public static void truncate() throws SQLException{
+		Connection con = ConnectionManager.getConnection();
+		PreparedStatement ps = con.prepareStatement("truncate table details");
+		ps.executeUpdate();
+	}
+
 }

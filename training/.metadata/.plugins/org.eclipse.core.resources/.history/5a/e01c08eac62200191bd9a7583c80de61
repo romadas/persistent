@@ -1,0 +1,16 @@
+package com.psl.test;
+
+import java.lang.reflect.Method;
+
+public class Main {
+
+	public static void main(String[] args) {
+		TestClass testClass = new TestClass();
+		Class<?> cls = TestClass.class;
+		for(Method m : cls.getDeclaredMethods()){
+			System.out.println(m.getName());
+			System.out.println(m.getAnnotations());
+		}
+	}
+
+}

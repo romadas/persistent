@@ -1,0 +1,13 @@
+package com.psl.test;
+
+public class TestClass {
+	public void testMethod_1(){
+		System.out.println("test method 1");
+	}
+	public void testMethod_2(){
+			System.out.println("test method 2");
+		}
+	public void testMethod_3(){
+		System.out.println("test method 3");
+	}
+}
