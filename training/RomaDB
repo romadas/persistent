@@ -1,0 +1,129 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.20
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema employee_payroll
+--
+
+CREATE DATABASE IF NOT EXISTS employee_payroll;
+USE employee_payroll;
+
+--
+-- Definition of table `employee`
+--
+
+DROP TABLE IF EXISTS `employee`;
+CREATE TABLE `employee` (
+  `EmployeeCode` varchar(45) NOT NULL,
+  `EmployeeName` varchar(45) NOT NULL,
+  `Designation` varchar(45) NOT NULL,
+  PRIMARY KEY (`EmployeeCode`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` (`EmployeeCode`,`EmployeeName`,`Designation`) VALUES 
+ ('008644','Irfan Khan','Team Lead'),
+ ('008971','Rajnikanth','Managing Director'),
+ ('010052','Aamir Khan','Account Manager'),
+ ('011143','Imran Khan','Module Lead'),
+ ('A03404','Triloknath Anna','Consultant');
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+
+
+--
+-- Definition of table `payroll`
+--
+
+DROP TABLE IF EXISTS `payroll`;
+CREATE TABLE `payroll` (
+  `PayrollId` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Month` varchar(45) NOT NULL,
+  `EmpCode` varchar(45) NOT NULL,
+  `Basic` double NOT NULL,
+  `HRA` double NOT NULL,
+  `CommAllow` double NOT NULL,
+  `LTA` double NOT NULL,
+  `PerfPay` double NOT NULL,
+  `UpkeepPay` double NOT NULL,
+  PRIMARY KEY (`PayrollId`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payroll`
+--
+
+/*!40000 ALTER TABLE `payroll` DISABLE KEYS */;
+INSERT INTO `payroll` (`PayrollId`,`Month`,`EmpCode`,`Basic`,`HRA`,`CommAllow`,`LTA`,`PerfPay`,`UpkeepPay`) VALUES 
+ (1,'August','010052',25000,7500,1250,1750,8500,650),
+ (2,'May','008644',15000,7500,1250,1750,6500,650),
+ (3,'June','011143',10000,7500,1250,1750,5000,650),
+ (4,'January','010052',25000,7500,1250,1750,9500,650),
+ (5,'February','008644',15000,7500,1250,1750,7000,650),
+ (6,'August','008971',50000,7500,1250,1750,12500,650),
+ (7,'March','A03404',5000,7500,1250,1750,1500,650),
+ (8,'June','008971',50000,7500,1250,1750,0,650),
+ (9,'May','008971',50000,7500,1250,1750,10000,650),
+ (10,'May','A03404',5000,7500,1250,1750,3500,650);
+/*!40000 ALTER TABLE `payroll` ENABLE KEYS */;
+
+--
+-- Create schema peripheral
+--
+
+CREATE DATABASE IF NOT EXISTS peripheral;
+USE peripheral;
+
+--
+-- Definition of table `peripheral`
+--
+
+DROP TABLE IF EXISTS `peripheral`;
+CREATE TABLE `peripheral` (
+  `itemCode` varchar(45) NOT NULL,
+  ` name` varchar(45) NOT NULL,
+  `description` varchar(45) NOT NULL,
+  `price` int(10) unsigned NOT NULL,
+  `quantity` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`itemCode`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `peripheral`
+--
+
+/*!40000 ALTER TABLE `peripheral` DISABLE KEYS */;
+INSERT INTO `peripheral` (`itemCode`,` name`,`description`,`price`,`quantity`) VALUES 
+ ('ITEM001','Optical Mouse','All surface compatibility',575,10),
+ ('ITEM002','Wireless Mouse','Operates from a distance of 100m',1099,5),
+ ('ITEM003','Mechanical Keyboard','Sturdy rugged and ready to take a pounding',1200,10),
+ ('ITEM004','LED Monitor','Excellent resolution and sharp features',15000,5),
+ ('ITEM005','24x Webcam','High resolution',6500,15);
+/*!40000 ALTER TABLE `peripheral` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

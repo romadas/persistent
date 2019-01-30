@@ -1,0 +1,17 @@
+package com.psl.mpc;
+
+public class Employee {
+	private String empid;
+
+	public Employee(String empid) {
+		super();
+		this.empid = empid;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + "]";
+	}
+	
+	
+}

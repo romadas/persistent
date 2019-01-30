@@ -1,0 +1,47 @@
+package com.psl.util;
+
+import java.util.Date;
+
+public class Employee implements Comparable<Employee>{
+	private int empId;
+	private String name;
+	private Date date;
+	
+	
+	
+	public Employee(){
+		
+	}
+	
+	public Employee(int empId, String name, Date date) {
+		super();
+		this.empId = empId;
+		this.name = name;
+		this.date = date;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		
+		return this.getEmpId()-o.getEmpId();
+	}
+	
+}

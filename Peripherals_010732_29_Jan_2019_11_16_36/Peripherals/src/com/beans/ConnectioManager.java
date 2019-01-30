@@ -1,0 +1,30 @@
+package com.beans;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ConnectioManager {
+	private String url = "jdbc:mysql://localhost:3306/peripheral";
+	private String user = "root";
+	private String pass = "root";
+	Connection con = null;
+
+	public Connection getConnection(){
+		try {
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				con = DriverManager.getConnection(url, user, pass);
+				return con;
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return con;
+	}
+}

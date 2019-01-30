@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.beans;
+
+/**
+ * @author roma_das
+ *
+ */
+public class PriceComparator {
+
+}

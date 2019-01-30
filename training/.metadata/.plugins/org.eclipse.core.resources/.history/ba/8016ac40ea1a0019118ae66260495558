@@ -1,9 +1,0 @@
-package com.client;
-
-import com.model.Medicine;
-
-public class TestMedicine {
-	public static void main(String args[]){
-		Medicine m = new Medicine("abc","fgh");
-	}
-}

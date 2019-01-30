@@ -1,0 +1,29 @@
+package com.psl.mpc;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class CalculateAge {
+
+	
+	
+	public static void main(String args[]) throws ParseException{
+		String date = "25-10-1990";
+			calculateAge(date);
+	}
+
+	private static int calculateAge(String date) throws ParseException {
+		// TODO Auto-generated method stub
+		Calendar birthday = Calendar.getInstance();
+		Calendar present  = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat();
+		Date birth = sdf.parse(date);
+		Date presentDate = present.getTime();
+		birthday.getTime();
+		if(birth.after(presentDate))
+			return 0;
+		return present.get(Calendar.YEAR)-birthday.get(Calendar.YEAR);
+	}
+}

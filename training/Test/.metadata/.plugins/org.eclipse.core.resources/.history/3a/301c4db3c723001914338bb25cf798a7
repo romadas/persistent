@@ -1,0 +1,89 @@
+package com.client;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+import com.bean.ConnectionManager;
+import com.bean.Employee;
+import com.bean.Payslip;
+
+public class Client {
+
+	public static void main(String[] args) {
+		/* write your code here */
+		Map<Employee, Set<Payslip>> empay = new HashMap<Employee, Set<Payslip>>();
+		populateEmployeeDetails(empay);
+		System.out.println(empay);
+	}
+	
+	public static void populateEmployeeDetails(Map<Employee, Set<Payslip>> employeeDetails) {
+		/* write your code here */
+		ConnectionManager cm = new ConnectionManager();
+		Connection c = cm.getConnection();
+		try {
+			PreparedStatement ps = c.prepareStatement("select * from employee");
+			ResultSet rs;
+			rs = ps.executeQuery();
+			while(rs.next()){
+				employeeDetails.put(new Employee(rs.getString(1),rs.getString(2),rs.getString(3)),new HashSet<Payslip>());
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void populatePayslipDetails(Map<Employee, Set<Payslip>> employeeDetails) {
+		/* write your code here */
+		
+		for(Employee e:employeeDetails.keySet()){
+			
+			
+
+			ConnectionManager cm = new ConnectionManager();
+			Connection c = cm.getConnection();
+			try {
+				PreparedStatement ps = c.prepareStatement("select * from payroll where EmpCode=?");
+				ps.setString(1, e.getEmployeeCode());
+				ResultSet rs ;
+				rs = ps.executeQuery();
+				while(rs.next()){
+					
+					Payslip p = new Payslip(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getDouble(4),rs.getDouble(5),rs.getDouble(6),rs.getDouble(7),rs.getDouble(8),rs.getDouble(9));
+					employeeDetails.get(e).add(p);
+				
+				}
+			
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+	}
+	
+	public static Map<Employee, Payslip> filterEmployeeRecordsByMonth(Map<Employee, Set<Payslip>> employeeDetails, String month) {
+		Map<Employee, Payslip> filteredRecords = new HashMap<Employee, Payslip>();
+		/* write your code here */
+		return filteredRecords;
+	}
+	
+	public static Map<Employee, Set<Payslip>> sortEmployeeRecordsByName(Map<Employee, Set<Payslip>> employeeDetails) {
+		Map<Employee, Set<Payslip>> sortedRecords = new TreeMap<Employee, Set<Payslip>>();
+		/* write your code here */
+		return sortedRecords;
+	}
+}

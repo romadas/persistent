@@ -1,0 +1,15 @@
+package com.psl.mpc;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class FileSerialization {
+	public static void main(String args[]) throws IOException{
+		FileOutputStream fos = new FileOutputStream("emp.db");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(new Employee("123"));
+		oos.close();
+	}
+}

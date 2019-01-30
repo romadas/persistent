@@ -1,0 +1,23 @@
+package com.psl.mpc;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class FileSerialization {
+	public static void main(String args[]) throws IOException, ClassNotFoundException{
+		FileOutputStream fos = new FileOutputStream("emp.db");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(new Employee("123"));
+		oos.close();
+		
+		FileInputStream fis = new FileInputStream("emp.db");
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		Employee obj = null;
+		obj = (Employee)ois.readObject();
+		System.out.println(obj);
+		ois.close();
+	}
+}
